@@ -3,9 +3,13 @@ REM Download ahmine and CanaryMod to set up coderdojobelfast Java room environme
 @echo off
 setlocal
 
+REM remove old folders
+IF EXIST "%USERPROFILE%\Desktop\server" RD /S /Q "%USERPROFILE%\Desktop\server"
+IF EXIST "%USERPROFILE%\Desktop\code" RD /S /Q "%USERPROFILE%\Desktop\code"
+
+REM get ahmine, from "Learn to Program with Minecraft Plugins", 2nd Edition, Andy Hunt, (c)2014 The Pragmatic Programmers.
 IF NOT EXIST %USERPROFILE%\Downloads\ahmine2-code.zip (
-  REM get ahmine, from "Learn to Program with Minecraft Plugins", 2nd Edition, Andy Hunt, (c)2014 The Pragmatic Programmers.
-  REM bitsadmin.exe /Transfer "Download ahmine" /Download http://media.pragprog.com/titles/ahmine2/code/ahmine2-code.zip %USERPROFILE%\Downloads\ahmine2-code.zip
+  bitsadmin.exe /Transfer "Download ahmine" /Download http://media.pragprog.com/titles/ahmine2/code/ahmine2-code.zip %USERPROFILE%\Downloads\ahmine2-code.zip
 )
 
 REM get CanaryMod
@@ -43,4 +47,4 @@ if exist %vbs% del /f /q %vbs%
 >>%vbs% echo Set fso = Nothing
 >>%vbs% echo Set objShell = Nothing
 cscript //nologo %vbs%
-REM if exist %vbs% del /f /q %vbs%
+if exist %vbs% del /f /q %vbs%
