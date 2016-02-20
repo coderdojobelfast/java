@@ -3,20 +3,25 @@ REM Download ahmine and CanaryMod to set up coderdojobelfast Java room environme
 @echo off
 setlocal
 
-REM get ahmine, from "Learn to Program with Minecraft Plugins", 2nd Edition, Andy Hunt, (c)2014 The Pragmatic Programmers.
-bitsadmin.exe /Transfer "Download ahmine" /Download http://media.pragprog.com/titles/ahmine2/code/ahmine2-code.zip %USERPROFILE%\Downloads\ahmine2-code.zip
+IF NOT EXIST %USERPROFILE%\Downloads\ahmine2-code.zip (
+  REM get ahmine, from "Learn to Program with Minecraft Plugins", 2nd Edition, Andy Hunt, (c)2014 The Pragmatic Programmers.
+  REM bitsadmin.exe /Transfer "Download ahmine" /Download http://media.pragprog.com/titles/ahmine2/code/ahmine2-code.zip %USERPROFILE%\Downloads\ahmine2-code.zip
+)
 
 REM get CanaryMod
-md %USERPROFILE%\Desktop\server
-bitsadmin.exe /Transfer "Download CanaryMod" /Download https://canarymod.net/releases/CanaryMod-1.2.0_0.jar %USERPROFILE%\Desktop\server\CanaryMod.jar
+IF NOT EXIST %USERPROFILE%\Downloads\CanaryMod.jar (
+  bitsadmin.exe /Transfer "Download CanaryMod" /Download https://canarymod.net/releases/CanaryMod-1.2.0_0.jar %USERPROFILE%\Downloads\CanaryMod.jar
+)
 
 REM unpack ahmine
 cd /d %~dp0
 Call :UnZipFile "%USERPROFILE%\Downloads" "%USERPROFILE%\Downloads\ahmine2-code.zip"
 Move /y "%USERPROFILE%\Downloads\code" "%USERPROFILE%\Desktop"
 
-REM copy starter to server
+REM copy starter and jar file to server
+md %USERPROFILE%\Desktop\server
 Copy /y "%USERPROFILE%\Desktop\code\runtime\start_minecraft.bat" "%USERPROFILE%\Desktop\server"
+Copy /y "%USERPROFILE%\Downloads\CanaryMod.jar" "%USERPROFILE%\Desktop\server"
 
 REM Run canarymod first time
 cd "%USERPROFILE%\Desktop\server"
@@ -34,8 +39,8 @@ if exist %vbs% del /f /q %vbs%
 >>%vbs% echo End If
 >>%vbs% echo set objShell = CreateObject("Shell.Application")
 >>%vbs% echo set FilesInZip=objShell.NameSpace(%2).items
->>%vbs% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
+>>%vbs% echo Call objShell.NameSpace(%1).CopyHere(FilesInZip, 20)
 >>%vbs% echo Set fso = Nothing
 >>%vbs% echo Set objShell = Nothing
 cscript //nologo %vbs%
-if exist %vbs% del /f /q %vbs%
+REM if exist %vbs% del /f /q %vbs%
