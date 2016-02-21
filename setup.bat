@@ -16,9 +16,11 @@ IF NOT EXIST "%USERPROFILE%\Desktop\sh.exe" (
 )
 
 REM get convenience wrapper for sh.exe
-IF NOT EXIST "%USERPROFILE%\Desktop\shell.bat" (
-  bitsadmin.exe /Transfer "Download shell.bat" /Download https://raw.githubusercontent.com/coderdojobelfast/java/master/shell.bat %USERPROFILE%\Desktop\shell.bat
+IF NOT EXIST "%USERPROFILE%\Downloads\shell.bat" (
+  bitsadmin.exe /Transfer "Download shell.bat" /Download https://raw.githubusercontent.com/coderdojobelfast/java/master/shell.bat %USERPROFILE%\Downloads\shell.bat
 )
+Copy /y /a "%USERPROFILE%\Downloads\shell.bat" "%USERPROFILE%\Desktop\shell.bat"
+
 
 REM get ahmine, from "Learn to Program with Minecraft Plugins", 2nd Edition, Andy Hunt, (c)2014 The Pragmatic Programmers.
 IF NOT EXIST %USERPROFILE%\Downloads\ahmine2-code.zip (
@@ -45,10 +47,6 @@ REM Run canarymod first time
 echo Running Canarymod
 cd "%USERPROFILE%\Desktop\server"
 Call .\"start_minecraft.bat"
-
-REM accept EULA
-echo Accepting EULA
-echo eula=true > "%USERPROFILE%\Desktop\server\eula.txt"
 
 echo Done
 
