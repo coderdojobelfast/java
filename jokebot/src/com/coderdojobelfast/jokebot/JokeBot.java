@@ -42,7 +42,8 @@ public class JokeBot {
 		jokeBook.add(new KnockKnock("Yodel ay ee", "I didn't know you could yodel!"));
 
 		for(KnockKnock joke: jokeBook) {
-			KnockKnock.tell(joke);
+			joke.tell();
 		}
+		System.out.println("That's all folks!!!");
 	}
 }

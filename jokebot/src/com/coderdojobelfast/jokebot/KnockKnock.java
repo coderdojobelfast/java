@@ -48,21 +48,21 @@ public class KnockKnock {
 		return punchline;
 	}
 	
-	public static void tell(KnockKnock joke) throws IOException {
+	public void tell() throws IOException {
 		System.out.println("Knock knock!");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String line = reader.readLine();
 		if (line.equals("who's there?")) {
-			System.out.println(joke.getSetup());
+			System.out.println(getSetup());
 			line = reader.readLine();
-			System.out.println(joke.getPunchline());
+			System.out.println(getPunchline());
 		}
 	}
 	
 	public static void main(String[] args) throws IOException {
 		KnockKnock joke = new KnockKnock("H", "Bless you!");
-		tell(joke);	
+		joke.tell();
 	    joke = new KnockKnock("Harry", "Harry up and let me in!");
-		tell(joke);	
+		joke.tell();
 	}
 }
