@@ -9,7 +9,7 @@ IF EXIST "%USERPROFILE%\Desktop\code" RD /S /Q "%USERPROFILE%\Desktop\code"
 
 REM get busybox
 IF NOT EXIST "%USERPROFILE%\Downloads\busybox.exe" (
-  bitsadmin.exe /Transfer "Download busybox.exe" /Download http://frippery.org/files/busybox/busybox.exe "%USERPROFILE%\Downloads\busybox.exe"
+  bitsadmin.exe /Transfer "Download shell.bat" /Download http://frippery.org/files/busybox/busybox.exe "%USERPROFILE%\Desktop\busybox.exe"
 )
 IF NOT EXIST "%USERPROFILE%\Desktop\sh.exe" (
   COPY /b "%USERPROFILE%\Downloads\busybox.exe" "%USERPROFILE%\Desktop\sh.exe"
@@ -30,7 +30,6 @@ IF NOT EXIST %USERPROFILE%\Downloads\CanaryMod.jar (
   bitsadmin.exe /Transfer "Download CanaryMod" /Download https://canarymod.net/releases/CanaryMod-1.2.0_0.jar %USERPROFILE%\Downloads\CanaryMod.jar
 )
 
-
 REM unpack ahmine
 cd /d %~dp0
 Call :UnZipFile "%USERPROFILE%\Downloads" "%USERPROFILE%\Downloads\ahmine2-code.zip"
@@ -40,6 +39,9 @@ REM copy starter and jar file to server
 md %USERPROFILE%\Desktop\server
 Copy /y "%USERPROFILE%\Desktop\code\runtime\start_minecraft.bat" "%USERPROFILE%\Desktop\server"
 Copy /y "%USERPROFILE%\Downloads\CanaryMod.jar" "%USERPROFILE%\Desktop\server"
+
+REM accept EULA
+REM echo eula=true > "%USERPROFILE%\Desktop\server\eula.txt"
 
 REM Run canarymod first time
 cd "%USERPROFILE%\Desktop\server"
