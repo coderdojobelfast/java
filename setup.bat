@@ -1,6 +1,6 @@
 REM Download ahmine and CanaryMod to set up coderdojobelfast Java room environment.
 
-REM @echo off
+@echo off
 setlocal
 
 REM remove old folders
@@ -42,8 +42,15 @@ Copy /y "%USERPROFILE%\Desktop\code\runtime\start_minecraft.bat" "%USERPROFILE%\
 Copy /y "%USERPROFILE%\Downloads\CanaryMod.jar" "%USERPROFILE%\Desktop\server"
 
 REM Run canarymod first time
+echo Running Canarymod
 cd "%USERPROFILE%\Desktop\server"
-.\"start_minecraft.bat"
+Call .\"start_minecraft.bat"
+
+REM accept EULA
+echo Accepting EULA
+echo eula=true > "%USERPROFILE%\Desktop\server\eula.txt"
+
+echo Done
 
 endlocal
 exit /b
