@@ -3,6 +3,8 @@ REM Download ahmine and CanaryMod to set up coderdojobelfast Java room environme
 @echo off
 setlocal
 
+@set PATH=%PATH%;C:\Program Files\Java\jdk1.7.0_25\bin
+
 REM remove old folders
 IF EXIST "%USERPROFILE%\Desktop\server" RD /S /Q "%USERPROFILE%\Desktop\server"
 IF EXIST "%USERPROFILE%\Desktop\code" RD /S /Q "%USERPROFILE%\Desktop\code"
@@ -50,6 +52,10 @@ Call .\"start_minecraft.bat"
 
 REM accept the EULA
 powershell -ExecutionPolicy Bypass -Command "(gc %USERPROFILE%\Desktop\server\eula.txt) -replace 'false', 'true' | Set-Content %USERPROFILE%\Desktop\server\eula.txt"
+
+REM build EZPlugin
+cd "%USERPROFILE%\Desktop\code\EZPlugin"
+..\..\sh.exe build_lib.sh
 
 echo Done
 
