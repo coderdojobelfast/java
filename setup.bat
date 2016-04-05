@@ -48,6 +48,9 @@ echo Running Canarymod
 cd "%USERPROFILE%\Desktop\server"
 Call .\"start_minecraft.bat"
 
+REM accept the EULA
+powershell -ExecutionPolicy Bypass -Command "(gc %USERPROFILE%\Desktop\server\eula.txt) -replace 'false', 'true' | Set-Content %USERPROFILE%\Desktop\server\eula.txt"
+
 echo Done
 
 endlocal
