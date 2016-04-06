@@ -1,3 +1,5 @@
+setlocal
+
 REM set location of zip
 set ziproot=h:\
 REM set ziproot=%USERPROFILE%\Downloads
