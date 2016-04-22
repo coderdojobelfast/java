@@ -13,6 +13,9 @@ IF EXIST "%USERPROFILE%\Desktop\shell.bat" DEL "%USERPROFILE%\Desktop\shell.bat"
 REM unpack zip to desktop
 Call :UnZipFile "%USERPROFILE%\Desktop" "%ziproot%\coderdojo-java.zip"
 
+endlocal
+exit /b
+
 :UnZipFile <ExtractTo> <newzipfile>
 set vbs="%temp%\_.vbs"
 if exist %vbs% del /f /q %vbs%
