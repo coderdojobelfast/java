@@ -3,7 +3,7 @@ REM Download ahmine and CanaryMod to set up coderdojobelfast Java room environme
 @echo off
 setlocal
 
-@set PATH=%PATH%;C:\Program Files\Java\jdk1.7.0_25\bin
+@set PATH=%PATH%;C:\Program Files\Java\jdk1.8.0_77\bin
 
 REM remove old folders
 IF EXIST "%USERPROFILE%\Desktop\server" RD /S /Q "%USERPROFILE%\Desktop\server"
