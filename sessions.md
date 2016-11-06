@@ -46,9 +46,75 @@ change the `for` to a `while` to introduce that.
 Fix the code!
 
 ## 4. Arrays, Lists and Maps
-* ArrayOfBlocks - what if we didn't want all cakes in our tower? arrays
+* ArrayOfBlocks - what if we wanted more than just cakes in our tower? 
+Arrays can store different blocks; BlockType[] = any value of BlockType; fixed length.
+Task - reverse the tower.
+NOTE - OakWood is deprecated - see compilation warning.  Change it to something else.
+```
+    for (int i=towerMaterials.length; i > 0 ; i--) {
+      loc.setY(loc.getY() + 1); // go up one each time
+      setBlockAt(loc, towerMaterials[i - 1]);
+    }
+```
+
+
 * ArrayAddMoreBlocks  lists
+More flexible than arrays as not fixed length; add and remove as you please.
+`arrayaddmoreblocks` adds three blocks each time you call it.
+Note two separate variables & objects at at (1) and (2).
+Task - change the building materials, add a couple more.
+
 * NamedSigns maps
+What maps look like - people's favourite TV shows:
+```
+            +---------------+
+"tom"  ---->| Dr. Who       |
+            +---------------+
+ 
+             +----------------+
+"jane"  ---->| The Musketeers |
+             +----------------+
+ 
+             +----------------+
+"bob"  ----> | Dangermouse    |
+             +----------------+
+
+```
+
+Named signs.
+Use like `signs new one` and `signs set one`.
+Explain `NamedSigns` uses a map of names to _locations_ of signs. You use `World.getTileEntity` to
+get the sign itself. 
+
+Challenge - you can have up to four lines on a sign. Update the `setSign` method to take 
+up to four words and put them on successive lines.
+
+Solution below. Note the arithmetic around `words = args.length -3`, using example
+
+```
+ 0    1   2    3    4   5   6
+set sign one hello how are you
+```
+
+Solution:
+```
+  private void setSign(Player me, String [] args) {//(6) 
+    String name = args[2];
+    if (!signs.containsKey(name)) {
+      // No such named sign
+      me.chat("No sign named " + name);
+      return;
+    }
+    Location loc = signs.get(name);
+    World world = loc.getWorld();
+    Sign sign = (Sign)world.getTileEntity(world.getBlockAt(loc));//(7)
+    int words = args.length - 3;
+    for (int i = 0; i < words && i < 4; i++) {
+        sign.setTextOnLine(args[i + 3], i);
+    }
+    sign.update();
+  }
+```
 
 ## 5. Spawning and Listening
 * Flying Creeper
