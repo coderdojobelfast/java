@@ -47,8 +47,11 @@ Fix the code!
 
 ## 4. Arrays, Lists and Maps
 * ArrayOfBlocks - what if we wanted more than just cakes in our tower? 
+
 Arrays can store different blocks; BlockType[] = any value of BlockType; fixed length.
+
 Task - reverse the tower.
+
 NOTE - OakWood is deprecated - see compilation warning.  Change it to something else.
 ```
     for (int i=towerMaterials.length; i > 0 ; i--) {
@@ -59,9 +62,12 @@ NOTE - OakWood is deprecated - see compilation warning.  Change it to something 
 
 
 * ArrayAddMoreBlocks  lists
+
 More flexible than arrays as not fixed length; add and remove as you please.
-`arrayaddmoreblocks` adds three blocks each time you call it.
-Note two separate variables & objects at at (1) and (2).
+
+`arrayaddmoreblocks` adds three blocks each time you call it.Note  two separate variables & objects 
+at (1) and (2).
+
 Task - change the building materials, add a couple more.
 
 * NamedSigns maps
@@ -92,8 +98,9 @@ up to four words and put them on successive lines.
 Solution below. Note the arithmetic around `words = args.length -3`, using example
 
 ```
- 0    1   2    3    4   5   6
-set sign one hello how are you
+i:                    0    1   2   3
+        0    1   2    3    4   5   6
+args:  set sign one hello how are you
 ```
 
 Solution:
