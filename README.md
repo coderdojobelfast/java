@@ -7,7 +7,7 @@ This is the repository for materials for the Java sessions.
 You can get all you need to do the exercises from the Java room at home right here.  It 
 does require a bit of work, but all will be explained below...
 
-The basic idea is that you download the file `setup.bat` from [here](https://raw.githubusercontent.com/coderdojobelfast/java/master/setup.bat) on to your PC's desktop, and run it. (You will need to make a small change to it before you run it, see below.)  When you run it, it takes care of downloading all you need from the Internet, and unpacking it for you. It will take a couple of minutes, and half way through it will prompt you 'Press any key to continue'.  Just press the Enter key when it does.
+The basic idea is that you download the file `setup.bat` onto your PC's desktop, and run it. Get it from [here](https://raw.githubusercontent.com/coderdojobelfast/java/master/setup.bat), right-click and choose the option to save it to your desktop. (You will need to make a small change to it before you run it, see below.)  When you run it, it takes care of downloading all you need from the Internet, and unpacking it for you. It will take a couple of minutes, and half way through it will prompt you 'Press any key to continue'.  Just press the Enter key when it does.
 
 It creates the following files and folders on your desktop:
 
@@ -34,7 +34,7 @@ The script `setup.bat` has the following at line 6:
     @set PATH=%PATH%;C:\Program Files\Java\jdk1.8.0_77\bin
     
 This "PATH" tells `setup.bat` where to find Java. The location above, `C:\Program Files\Java\jdk1.8.0_77\bin`, is right for the Java room in Belfast Met, but will be different for you when you have installed Java.  You'll need to edit the file with Notepad++ or another good text editor (Notepad will do at a pinch!) and fix the location.
-Change `C:\Program Files\Java\jdk1.8.0_77\bin` to the location where the Java installer put your JDK. If you didn't take note where this was, you should be able to find it in `C:\Program Files\Java`, or maybe ``C:\Program Files (x86)\Java\`. Leave the `bin` on the end! For you the line may look like:
+Change `C:\Program Files\Java\jdk1.8.0_77\bin` to the location where the Java installer put your JDK. If you didn't take note where this was, you should be able to find it in `C:\Program Files\Java`, or maybe `C:\Program Files (x86)\Java\`. Leave the `bin` on the end! For you the line may look like:
 
     @set PATH=%PATH%;C:\Program Files\Java\jdk1.8.0_111\bin
 
