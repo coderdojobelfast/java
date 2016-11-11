@@ -1,4 +1,4 @@
-# Welcome to the Java Room!
+# Welcome to the Java Room
 
 This is the repository for materials for the Java sessions.  
 
@@ -7,10 +7,7 @@ This is the repository for materials for the Java sessions.
 You can get all you need to do the exercises from the Java room at home right here.  It 
 does require a bit of work, but all will be explained below...
 
-The basic idea is that you download [`setup.bat`](https://raw.githubusercontent.com/coderdojobelfast/java/master/setup.bat) file on to your PC's desktop, and run it. (You will 
-need to make a small change to it before you run it, see below.)  When you run it, it 
-takes care of downloading all you need from the Internet, and unpacking it for you. It will
-take a couple of minutes, and half way through it will prompt you 'Press any key to continue'.  Just press the Enter key when it does.
+The basic idea is that you download the file `setup.bat` from [here](https://raw.githubusercontent.com/coderdojobelfast/java/master/setup.bat) on to your PC's desktop, and run it. (You will need to make a small change to it before you run it, see below.)  When you run it, it takes care of downloading all you need from the Internet, and unpacking it for you. It will take a couple of minutes, and half way through it will prompt you 'Press any key to continue'.  Just press the Enter key when it does.
 
 It creates the following files and folders on your desktop:
 
@@ -21,7 +18,7 @@ helpful program files like this are known as "scripts".
 * `server` This is the folder with the Minecraft server.
 
 
-Of course you'll also need Minecraft (get it [here](https://minecraft.net/en/download/), and your own Minecraft account (sign up [here](https://minecraft.net/).
+Of course you'll also need Minecraft (get it [here](https://minecraft.net/en/download/)), and your own Minecraft account (sign up [here](https://minecraft.net/)).
 
 We are using Eclipse to edit our code (get the latest [here](https://eclipse.org/downloads/)).
 
@@ -36,13 +33,13 @@ The script `setup.bat` has the following at line 6:
 
     @set PATH=%PATH%;C:\Program Files\Java\jdk1.8.0_77\bin
     
-This "PATH" tells `setup.bat` where to find Java. The location above, `C:\Program Files\Java\jdk1.8.0_77\bin`, is right for the Java room in Belfast Met, but will be different for you when you have installed Java.  You'll need to edit the file with Notepad++ or another good editor (Notepad will do at a pinch!) and fix the location.
+This "PATH" tells `setup.bat` where to find Java. The location above, `C:\Program Files\Java\jdk1.8.0_77\bin`, is right for the Java room in Belfast Met, but will be different for you when you have installed Java.  You'll need to edit the file with Notepad++ or another good text editor (Notepad will do at a pinch!) and fix the location.
 Change `C:\Program Files\Java\jdk1.8.0_77\bin` to the location where the Java installer put your JDK. If you didn't take note where this was, you should be able to find it in `C:\Program Files\Java`, or maybe ``C:\Program Files (x86)\Java\`. Leave the `bin` on the end! For you the line may look like:
 
     @set PATH=%PATH%;C:\Program Files\Java\jdk1.8.0_111\bin
 
 
-Once you have run `setup.bat` and downloaded everything, you have to make the same change to the PATH in the script `shell.bat`. Again, edit it with Notepad++ and fix the PATH.
+Once you have run `setup.bat` and downloaded everything, you have to make the same change to the PATH in the file `shell.bat`. Again, edit it with Notepad++ and fix the PATH.
 Make sure it has just two lines, like this (only with your fixed location for the Java): 
 
     @set PATH=C:\Program Files\Java\jdk1.8.0_77\bin;%PATH%
@@ -51,9 +48,11 @@ Make sure it has just two lines, like this (only with your fixed location for th
 
 ### That's it!
 
-You are now ready to open, build, and run the examples just like on Saturday mornings!
+You are now ready to open, build, and run the examples just like on Saturday mornings.
 
-## Jokebot
+
+
+## Mentor's notes - Jokebot
 
 Jokebot is code for the first session, to get familiar with Eclipse and learn some basic Java by writing a joke-telling robot.
 
@@ -65,17 +64,17 @@ Introduce simple Java 'hello world' style program - skip over structure for now 
 
 ### AskJoke
 
-Add concepts of input, variables, 'if' statement.
+Add concepts of input, variables, `if` statement.
 
 ### KnockKnock
 
-Dive into OO concepts a bit more deeply.  Introduce class and object concepts, member variables, methods.
+Dive into OO concepts a bit more deeply.  Introduce `class` and object concepts, member variables, methods.
 
 Why bother with classes?  Explain usefulness for code re-use, illustrate with main.
 
 ### JokeBot
 
-Finally we can write our joke-telling robot, re-using the knock-knock code. Lists, for loops.  Make a note of the encapsulation of the joke code, the JokeBot code doesn't know how the joke works and doesn't care.
+Finally we can write our joke-telling robot, re-using the knock-knock code. Lists, `for` loops.  Make a note of the encapsulation of the joke code, the JokeBot code doesn't know how the joke works and doesn't care.
 
 
 
