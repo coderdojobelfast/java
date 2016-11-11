@@ -52,7 +52,7 @@ You are now ready to open, build, and run the examples just like on Saturday mor
 
 
 
-## Mentor's notes - Jokebot
+## Mentors' notes - Jokebot
 
 Jokebot is code for the first session, to get familiar with Eclipse and learn some basic Java by writing a joke-telling robot.
 
