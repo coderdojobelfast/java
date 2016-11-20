@@ -17,7 +17,7 @@ Java | | | |
 ### programs
 
 `TellJoke` is a simple Java program.  All Java code lives in a [`class`](#classes). 
-A Java program has a starting point which is a [method](#methods) called `main`.
+A Java program has a starting point called `main`.
 
 
 ```java
