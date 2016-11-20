@@ -44,8 +44,33 @@ to the screen:
 		System.out.println("What do you call a sleeping bull?  A bulldozer!");
 ```
 
+See how it ends in a semi-colon?  
 
 ### variables
+
+If you get hold of something in Java and want to do something with it later, you need to have some sort of "handle" that will let you hang on to it for as long as you need.  What you need is a variable:
+
+```java
+int age = 10;
+``` 
+
+A variable is a reference to some object or value that you got from somewhere (or made yourself).  It has
+a name, like `age` above, and a value, like `10`.  You also have to say what the _type_ of the variable is. The example above has type `int`, which is short for "integer" (0, 1, 2, 3...).
+
+Java has a few simple types like numbers and letters (e.g. `char c = 'X'`), but lots of the time variables
+refer to objects that have been made from [classes](#classes).  Even simple things like text messages are objects:
+
+```java
+String myMessage = "Hello Minecrafters";
+```
+
+or in our "KnockKnock" joke [example](https://github.com/coderdojobelfast/java/blob/master/jokebot/src/com/coderdojobelfast/jokebot/KnockKnock.java#L63) we have 
+
+```java
+KnockKnock joke = new KnockKnock("H", "Bless you!");
+```
+
+
 
 ### `if`
 
@@ -57,11 +82,15 @@ to the screen:
 
 ### classes
 
+and objects, instances
+
 ### arrays
 
 ### lists
 
 ### maps
+
+
 
 ## Minecraft bits
 
