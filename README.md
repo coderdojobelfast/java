@@ -2,13 +2,13 @@
 
 This is the repository for materials for the Java sessions.  
 
-Here you can find out 
+Here you can find 
 
 Click below for | this
 ---- | ----
 [Do it yourself](diy.md) | How to set up your own computer to do the Java examples at home
 [Cheatsheets](cheatsheets.md) | Quick and simple reminders of the things we've learned
-[Mentors' notes](mentors.md) | Notes for mentors
+[Mentors' notes](mentors.md) | Notes for mentors on the sessions for the room
 
 
 

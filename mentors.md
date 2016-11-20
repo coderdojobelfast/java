@@ -94,7 +94,7 @@ NOTE - OakWood is deprecated - see compilation warning.  Change it to something 
 
 More flexible than arrays as not fixed length; add and remove as you please.
 
-`arrayaddmoreblocks` adds three blocks each time you call it.Note  two separate variables & objects 
+`arrayaddmoreblocks` adds three blocks each time you call it. Note two separate variables & objects 
 at (1) and (2).
 
 Task - change the building materials, add a couple more.
