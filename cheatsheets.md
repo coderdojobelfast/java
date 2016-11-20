@@ -1,14 +1,14 @@
 # Cheatsheets
 
-Java | &nbsp;| |
---- | --- | --- | 
+Java | | | |
+--- | --- | --- | ---
 [programs](#programs) | [statements](#statements) | [variables](#variables) | [methods](#methods)
 [classes](#classes) | [if](#if) | [for](#for) | [while](#while) 
  [arrays](#arrays) | [lists](#lists) | [maps](#maps)
  
  
- Minecraft | &nbsp; |
- --- | --- |
+ Minecraft | | |
+ --- | --- | ---
  [plugins](#plugins) | [commands](#commands) | [locations](#locations) 
  [set blocks](#set-blocks) | [teleport](#teleport) | [spawn](#spawn) 
 
