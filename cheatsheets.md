@@ -69,7 +69,8 @@ or in our "KnockKnock" joke [example](https://github.com/coderdojobelfast/java/b
 ```java
 KnockKnock joke = new KnockKnock("H", "Bless you!");
 ```
-
+ 
+This creates a new object that is a Knock Knock joke, and remembers it in the variable `joke`.
 
 
 ### `if`
