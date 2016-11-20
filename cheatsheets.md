@@ -12,7 +12,7 @@ Java | &nbsp;| |
  [plugins](#plugins) | [commands](#commands) | [locations](#locations) 
  [set blocks](#set-blocks) | [teleport](#teleport) | [spawn](#spawn) 
 
-### Java bits
+## Java bits
 
 ### programs
 
