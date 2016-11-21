@@ -153,13 +153,34 @@ Solution:
 ```
 
 ## 5. Spawning and Listening
-* Flying Creeper
-* Back plugin - Another way to invoke plugins - listen to events.
-Just introduce the concept and let them try running it
-but don't bother with the details of how the plugin works.
-* Firebow - write our own plugin entirely from scratch
-  * new class
-  * copy pattern from Back
+Flying Creeper p125  Spawning entities - this time not using 
+the helper functions.
+
+Run plugin; check code, illustrating things you can do in Minecraft:
+* spawning
+* also potions
+
+Exercise: change the creeper to something less scary.
+
+Back plugin - Another way to invoke plugins - listen to events.
+
+Just introduce the concept and let them try running it.
+Use `teleport playername 10 20 30` _in CanaryMod console_ to
+teleport. Look at the `implements PluginListener`, `enable()` and
+`@HookHandler` parts, but don't bother with the details of how the
+rest of the plugin works.
+
+Instead let's look at 
+
+Firebow p133 - write our own plugin entirely from scratch
+* new class
+* `extends EZPlugin` 
+* `implements PluginListener`
+* copy `enable()` from `BackCmd`
+* `@HookHandler`
+* `public void onArrowHit(ProjectileHitHook event)`
+* don't bother with `enabled`
+* then walk them through `onArrowHit` implementation
 
 ## 6. Scheduling
 * Flaming Cows
