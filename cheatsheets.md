@@ -70,10 +70,24 @@ or in our "KnockKnock" joke [example](https://github.com/coderdojobelfast/java/b
 KnockKnock joke = new KnockKnock("H", "Bless you!");
 ```
  
-This creates a new object that is a Knock Knock joke, and remembers it in the variable `joke`.
+This creates a new object that is a Knock Knock joke, and remembers it in the variable `joke`. `joke` has type `KnockKnock`, so it is only good for holding knock-knock jokes; no puns, shaggy dog stories or people walking into bars.
 
 
 ### `if`
+
+If you want to maybe do something or maybe not, depending on whether something else is one way or another, well...  the clue is at the start of the sentence; you need an `if` statement:
+
+```java
+if (line.equals("who's there?")) {
+	System.out.println(getSetup());
+	line = reader.readLine();
+	System.out.println(getPunchline());
+}
+```
+This tests `line.equals("who's there?")`, which is called the _condition_.  A condition is anything that gives you a true/false answer. This one checks whether or not the string referred to by `line` is the message "who's there?".  If it is (the condition is true), then Java executes all the statements between the `{` and `}` above.  If it's not (the condition is false) then Java skips all those statements and carries on with whatever comes after.
+
+Check out how this is used in the Knock Knock [example](https://github.com/coderdojobelfast/java/blob/master/jokebot/src/com/coderdojobelfast/jokebot/KnockKnock.java#L55).
+
 
 ### `for`
 
