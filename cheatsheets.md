@@ -1,10 +1,13 @@
 # Cheatsheets
 
+A quick reminder of some of the things we've seen in the sessions in the Java room.
+
 Java | | | |
 --- | --- | --- | ---
 [programs](#programs) | [statements](#statements) | [variables](#variables) | [methods](#methods)
 [classes](#classes) | [if](#if) | [for](#for) | [while](#while) 
- [arrays](#arrays) | [lists](#lists) | [maps](#maps)
+ [arrays](#arrays) | [lists](#lists) | [maps](#maps) | [output](#output)
+ [input](#input) | | |
  
  
  Minecraft | | |
@@ -17,7 +20,7 @@ Java | | | |
 ### programs
 [(top)](#cheatsheets)
 
-`TellJoke` is a simple Java program.  All Java code lives in a [`class`](#classes). 
+`TellJoke` is a simple Java program.  All Java code lives in a [class](#classes). 
 A Java program has a starting point called `main`.
 
 
@@ -111,7 +114,7 @@ The loop above gets going with `int i=0`.  This is just the same as in [variable
 
 So the first time round the loop, `i` is 0, which is less than 10, so Java runs the statements between the `{` and `}` and spawns a pig.  Then `i++` adds one to `i`, which becomes 1. Now the loop goes round again, and `i` is still less than 10, so it spawns another pig and adds 1 to `i` again.  This keeps up until `i` becomes 10. This time when Java checks `i < 10` it decides that `i` isn't less than 10 (it's equal to it), so it stops there and goes on to the next thing after the `for`.
 
-There's another variation on `for` in the bit on `arrays`.
+There's another variation on `for` in the cheatsheet on `arrays`.
 
 ### `while`
 
@@ -134,9 +137,9 @@ Watch out - if we forgot to add to the "y" of `towerBase`, the test would always
 ### methods
 [(top)](#cheatsheets)
 
-If you find yourself writing a bit of code that's more or less the same as some bit that you wrote already, - then stop!  Having lots of copies of the same code is a Bad Thing, because, if you have to make changes, you have to change lots of places, and it's hard to stay right.  
+If you find yourself writing a bit of code that's more or less the same as some bit that you wrote already - then stop!  Having lots of copies of the same code is a Bad Thing, because, if you have to make changes, you have to change lots of places, and it's hard to stay right.  
 
-It's much better to turn that code into a little mini-command of its own, and then use that command in every place where you need it.  Some languages call these mini-commands "functions" or something else; Java calls them "methods".  Methods are so useful that Java insists you put practically all your code in a method (and every method in a [`class`](#classes)).  The `main` we saw in [programs](#programs) above is a method. We use methods to make the commands in all our plugins. Here's a method from `ArrayOfBlocks`:
+It's much better to turn that code into a little mini-command of its own, and then use that command in every place where you need it.  Some languages call these mini-commands "functions" or something else; Java calls them "methods".  Methods are so useful that Java insists you put practically all your code in a method (and every method in a [class](#classes)).  The `main` we saw in [programs](#programs) above is a method. We use methods to make the commands in all our plugins. Here's a method from `ArrayOfBlocks`:
 
 ```java
   public void arrayofblocksCommand(MessageReceiver caller, String[] args) {
@@ -172,7 +175,7 @@ System.out.println("2 + 3 is "  +  sum);
 
 which prints out `2 + 3 is 5`.
 
-If you just need your method to do something and don't need a result, use `void` for the return type, and don't put a `return` inside the method.  (Like `buildTower` above.)
+If you just need your method to do something and don't need a result, use `void` for the return type, and don't put a `return` inside the method (like `buildTower` above).
 
 
 ### classes
@@ -191,6 +194,11 @@ mention `for (T t : W)`.
 ### maps
 [(top)](#cheatsheets)
 
+### output
+[(top)](#cheatsheets)
+
+### input
+[(top)](#cheatsheets)
 
 ## Minecraft bits
 
