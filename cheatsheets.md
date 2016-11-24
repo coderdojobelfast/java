@@ -127,7 +127,9 @@ It basically just keeps going round the loop, making a test each time, until the
     }
 ```
 
-This loop's test is `towerBase.getY() < towerLoc.getY()`. The loop keeps going round so long as the "y" coordinate of `towerBase` is less than the "y" coordinate of `towerLoc`.  Inside the loop we are adding one to the "y" coordinate of `towerBase` each time round the loop.  Eventually the coordinate is the same as the "y" of `towerLoc`, so it's not less than it any more, and the loop finishes.
+This loop's test is `towerBase.getY() < towerLoc.getY()`. The loop keeps going round so long as the "y" coordinate of `towerBase` is less than the "y" coordinate of `towerLoc`.  Inside the loop we are adding one to the "y" coordinate of `towerBase` each time round the loop.  Eventually the coordinate is the same as the "y" of `towerLoc`, so it's not less than it any more, and the loop finishes. 
+
+Watch out - if we forgot to add to the "y" of `towerBase`, the test would always be true, and the loop would never finish!
 
 ### methods
 
