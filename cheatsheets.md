@@ -115,6 +115,15 @@ There's another variation on `for` in the bit on `arrays`.
 
 ### `while`
 
+Here's another way to do a loop. It's simpler than `for`, and it's called `while`.
+
+It basically just keeps going round the loop until its condition isn't true any more:
+
+```java
+
+```
+
+
 ### methods
 
 ### classes
