@@ -117,12 +117,17 @@ There's another variation on `for` in the bit on `arrays`.
 
 Here's another way to do a loop. It's simpler than `for`, and it's called `while`.
 
-It basically just keeps going round the loop until its condition isn't true any more:
+It basically just keeps going round the loop until its condition isn't true any more. Here's one from our `ArrayAddMoreBlocks` plugin:
 
 ```java
-
+    while (towerBase.getY() < towerLoc.getY()) {
+      setBlockAt(towerBase, BlockType.Air);
+      logger.info("Clearing block at " + printLoc(towerBase));
+      towerBase.setY(towerBase.getY() + 1); // go up one each time
+    }
 ```
 
+The loop keeps going round so long as the "y" coordinate of `towerBase` is less than the "y" coordinate of `towerLoc`.  Inside the loop we are adding one to the "y" coordinate of `towerBase` each time round the loop.  Eventually the coordinate is the same as the "y" of `towerLoc`, so it's not less than it any more, and the loop finishes.
 
 ### methods
 
