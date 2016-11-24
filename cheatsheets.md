@@ -132,34 +132,84 @@ This loop's test is `towerBase.getY() < towerLoc.getY()`. The loop keeps going r
 Watch out - if we forgot to add to the "y" of `towerBase`, the test would always be true, and the loop would never finish!
 
 ### methods
+[(top)](#cheatsheets)
+
+If you find yourself writing a bit of code that's more or less the same as some bit that you wrote already, - then stop!  Having lots of copies of the same code is a Bad Thing, because, if you have to make changes, you have to change lots of places, and it's hard to stay right.  
+
+It's much better to turn that code into a little mini-command of its own, and then use that command in every place where you need it.  Some languages call these mini-commands "functions" or something else; Java calls them "methods".  Methods are so useful that Java insists you put practically all your code in a method (and every method in a [`class`](#classes)).  The `main` we saw in [programs](#programs) above is a method. We use methods to make the commands in all our plugins. Here's a method from `ArrayOfBlocks`:
+
+```java
+  public void arrayofblocksCommand(MessageReceiver caller, String[] args) {
+    if (caller instanceof Player) { 
+      Player me = (Player)caller;
+      buildTower(me);
+    }
+  }
+```
+
+Instead of doing _all_ the work itself, `arrayofblocksCommand` itself uses a "mini-command" (a method) of its own, `buildTower`, which is also inside the `ArrayOfBlocks.java`.
+
+```java
+  public void buildTower(Player me) {
+	//.... etc, etc. various instructions here!
+  }
+```
+
+The examples above show how you can give a method some _inputs_ to work with, like `Player me`. A method can also work out some result and give it back to whoever called it, like this simple method to add two numbers. It uses `return` to hand back the result:
+
+```java
+  public int addTwoNumbers(int x, int y) {
+      return x + y;
+  }
+```
+
+The `int` (called the "return type") in front of `addTwoNumbers` means that the result of `addTwoNumbers` will always be an `int` (integer) number.  You could use `addTwoNumbers` like
+
+```java
+int sum = addTwoNumbers(2, 3);
+System.out.println("2 + 3 is "  +  sum);
+```
+
+which prints out `2 + 3 is 5`.
+
+If you just need your method to do something and don't need a result, use `void` for the return type, and don't put a `return` inside the method.  (Like `buildTower` above.)
+
 
 ### classes
+[(top)](#cheatsheets)
 
 and objects, instances
 
 ### arrays
+[(top)](#cheatsheets)
+
 mention `for (T t : W)`.
 
 ### lists
+[(top)](#cheatsheets)
 
 ### maps
-
+[(top)](#cheatsheets)
 
 
 ## Minecraft bits
 
 ###  plugins 
+[(top)](#cheatsheets)
 
 ### commands
+[(top)](#cheatsheets)
  
 ### locations
+[(top)](#cheatsheets)
  
 ### set blocks 
+[(top)](#cheatsheets)
 
 ### teleport 
+[(top)](#cheatsheets)
 
 ### spawn 
-
-
+[(top)](#cheatsheets)
  
  
