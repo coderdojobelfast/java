@@ -105,7 +105,7 @@ for (int i=0 ; i < 10 ; i++) {
 }
 ```
 
-A `for` loop has three parts - one to say how to start the loop, one to say when to stop it, and one to say what to do each time round.  These are the three bits between the `(` and `)`, separated by `;`s.
+A `for` loop has three parts - one part says how to start the loop, one is a test to say when to stop it, and one says what to do each time round.  These are the three bits between the `(` and `)`, separated by `;`s.
 
 The loop above gets going with `int i=0`.  This is just the same as in [variables](#variables). It creates a variable, `i`, which will contain integers, and sets its value to `0`. Next the `i < 10` tells Java to keep going as long as the value in `i` is less than 10. We'd better remember to change `i` as we go round the loop or it will never stop. So...  ...the last bit, `i++` says what to do each time round the loop. `i++` is just shorthand for "add one to `i`". You could have written `i = i + 1`.
 
@@ -117,7 +117,7 @@ There's another variation on `for` in the bit on `arrays`.
 
 Here's another way to do a loop. It's simpler than `for`, and it's called `while`.
 
-It basically just keeps going round the loop until its condition isn't true any more. Here's one from our `ArrayAddMoreBlocks` plugin:
+It basically just keeps going round the loop, making a test each time, until the test isn't true any more. Here's one from our `ArrayAddMoreBlocks` plugin:
 
 ```java
     while (towerBase.getY() < towerLoc.getY()) {
@@ -127,7 +127,7 @@ It basically just keeps going round the loop until its condition isn't true any 
     }
 ```
 
-The loop keeps going round so long as the "y" coordinate of `towerBase` is less than the "y" coordinate of `towerLoc`.  Inside the loop we are adding one to the "y" coordinate of `towerBase` each time round the loop.  Eventually the coordinate is the same as the "y" of `towerLoc`, so it's not less than it any more, and the loop finishes.
+This loop's test is `towerBase.getY() < towerLoc.getY()`. The loop keeps going round so long as the "y" coordinate of `towerBase` is less than the "y" coordinate of `towerLoc`.  Inside the loop we are adding one to the "y" coordinate of `towerBase` each time round the loop.  Eventually the coordinate is the same as the "y" of `towerLoc`, so it's not less than it any more, and the loop finishes.
 
 ### methods
 
