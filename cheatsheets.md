@@ -194,6 +194,59 @@ mention `for (T t : W)`.
 ### maps
 [(top)](#cheatsheets)
 
+Maps are another way of storing data that is often handy.  The trouble with arrays is that 
+to get a value out of it you have to know where it is in the array in the first place, or
+else search through it. With lists your only option is to search through it to find what you 
+want.  
+
+Maps are different.  When you store things in a map they aren't in any particular order,
+but they all have their own label. If you know the label you can get the thing straight
+out of the map at once. Here's a map of three kids' favourite TV shows:
+
+If you want to know Jane's favourite show, you just supply the label, "jane", and the 
+map will give you the value ("Stephen Universe").
+
+```
+            +---------------+
+"tom"  ---->| Dr. Who       |
+            +---------------+
+ 
+             +------------------+
+"jane"  ---->| Stephen Universe |
+             +------------------+
+ 
+             +----------------+
+"bob"  ----> | Dangermouse    |
+             +----------------+
+
+```
+
+Here's what it actually looks like in Java. First we'll create a map:
+
+```java
+Map<String, TVShow> faves = new HashMap<>();
+```
+(Like most things in Java, maps come in different flavours.  HashMap is one flavour.)
+
+Now we add the shows.  The command that does this is called `put`. Say we already 
+have a class called `TVShow` (see more on classes [here](#classes)):
+
+```java
+faves.put("tom", new TVShow("Dr. Who"));
+faves.put("jane", new TVShow("Stephen Universe"));
+faves.put("bob", new TVShow("Dangermouse"));
+```
+
+Now any time later when someone wants to know Jane's favourite show they use `get` to, er, get 
+the show out of the map:
+
+```java
+TVShow janesFave = faves.get("jane");
+System.out.println("Jane's favourite show is " + janesFave);
+```
+which prints "Stephen Universe".
+
+
 ### output
 [(top)](#cheatsheets)
 
