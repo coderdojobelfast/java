@@ -196,7 +196,8 @@ one thing in each compartment. Here's an array of numbers:
 ```
 
 When you create an array, you have to say how big it is. Once it's made, it can't change size,
-and you can't put any more into it once it's full.
+and you can't put any more into it once it's full. All the things in the array have to be the 
+same type. Here's an array of `int`s:
 
 ```java
 int [] myNumbers = new int[6];
