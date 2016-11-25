@@ -303,7 +303,7 @@ out of the map at once. Here's a map of three kids' favourite TV shows. If you w
 ```
 
 
-.
+
 
 Here's what it actually looks like in Java. First we'll create a map. Let's say we already 
 have a class called `TVShow` (see more on classes [here](#classes)):
