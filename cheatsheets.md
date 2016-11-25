@@ -186,18 +186,58 @@ and objects, instances
 ### arrays
 [(top)](#cheatsheets)
 
-mention `for (T t : W)`.
+An array is one way of storing data. It's like a long box with a number of compartments in it, and you can store
+one thing in each compartment. Here's an array of numbers:
+
+```
++-----+-----+-----+-----+-----+-----+
+|   1 |  9  |  44 | 6   |  2  | 99  |
++-----+-----+-----+-----+-----+-----+
+```
+
+When you create an array, you have to say how big it is. Once it's made, it can't change size,
+and you can't put any more into it once it's full.
+
+```java
+int [] myNumbers = new int[6];
+```
+
+To put something into one of the slots in array you say which slot, with the number of
+the slot inside the square brackets.  We saw this in `ArrayOfBlocks`:
+
+```java
+    towerMaterials[0] = BlockType.Stone;
+    towerMaterials[1] = BlockType.Cake;
+    towerMaterials[2] = BlockType.OakWood;
+    towerMaterials[3] = BlockType.Glass;
+    towerMaterials[4] = BlockType.Anvil;
+```
+Watch out!  Java starts counting at `0`, so the first slot in the array is `towerMaterials[0]`.
+
+And you can use any item from the array by using the number in brackets again to say which one you 
+want, like `towerMaterials[i]` in :
+```java
+    for (int i=0; i < towerMaterials.length ; i++) {
+      loc.setY(loc.getY() + 1); // go up one each time
+      setBlockAt(loc, towerMaterials[i]);
+    } 
+```
+
+
 
 ### lists
 [(top)](#cheatsheets)
+
+
+mention `for (T t : W)`.
 
 ### maps
 [(top)](#cheatsheets)
 
 Maps are another way of storing data that is often handy.  The trouble with arrays is that 
-to get a value out of it you have to know where it is in the array in the first place, or
-else search through it. With lists your only option is to search through it to find what you 
-want.  
+to get a value out of an array you have to know where it is in the array in the first place, or
+else search through the array until you find it. With lists your only option is to search the list
+to find what you want.  
 
 Maps are different.  When you store things in a map they aren't in any particular order,
 but they all have their own label. If you know the label you can get the thing straight
@@ -221,15 +261,16 @@ map will give you the value ("Stephen Universe").
 
 ```
 
-Here's what it actually looks like in Java. First we'll create a map:
+Here's what it actually looks like in Java. First we'll create a map. Let's say we already 
+have a class called `TVShow` (see more on classes [here](#classes)):
 
 ```java
 Map<String, TVShow> faves = new HashMap<>();
 ```
-(Like most things in Java, maps come in different flavours.  HashMap is one flavour.)
+The `Map<String, TVShow>` bit means that the map is going to store `TVShows` and the labels in it are `String`s.
+Like many things in Java, maps come in different flavours.  HashMap is one flavour.
 
-Now we add the shows.  The command that does this is called `put`. Say we already 
-have a class called `TVShow` (see more on classes [here](#classes)):
+Now we add the shows.  The command that does this is called `put`:
 
 ```java
 faves.put("tom", new TVShow("Dr. Who"));
