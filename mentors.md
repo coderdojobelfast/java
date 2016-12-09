@@ -183,7 +183,11 @@ Firebow p133 - write our own plugin entirely from scratch
 * then walk them through `onArrowHit` implementation
 
 ## 6. Scheduling
-* Flaming Cows
+
+Adds task scheduling.  Now that we know how to react when events happen, what if 
+we want our plugin to keep doing something over and over again as time goes on?
+
+* Flaming Cows p140
 
 
 
